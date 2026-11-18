@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bài thực hành 1 session5</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="lập-kế-hoạch-tài-chính-cá-nhân-bằng-chain-of-thought">Lập kế hoạch tài chính cá nhân bằng Chain-of-Thought</h1>
+<h2 id="đề-bài-">Đề bài :</h2>
+<p>Một cá nhân có thu nhập biến động mỗi tháng và đang có một số khoản nợ cần thanh toán. Họ cần một trợ lý AI thông minh lập kế hoạch tài chính chi tiết, tối ưu hóa dòng tiền và đưa ra đề xuất phân bổ ngân sách chi tiêu hợp lý.</p>
+<p>Do bài toán liên quan đến nhiều phép tính số học và ràng buộc tài chính (tiết kiệm tối thiểu 20%, trả nợ đúng hạn, quỹ dự phòng), nếu để AI trả lời ngay đáp án sẽ rất dễ bị sai lệch số liệu.</p>
+<h2 id="mục-tiêu-">Mục tiêu :</h2>
+<p>Thiết kế prompt yêu cầu AI lập kế hoạch tài chính hàng tháng từ dữ liệu đầu vào gồm: Thu nhập, Chi phí cố định, Các khoản nợ, Mục tiêu tiết kiệm.</p>
+<p>Yêu cầu AI thực hiện suy luận từng bước (Chain-of-Thought) để tính toán ngân sách trước khi xuất kết quả cuối cùng.</p>
+<h2 id="yêu-cầu-">Yêu cầu :</h2>
+<p>Trình bày kết quả lập luận thành hai phần rõ rệt:</p>
+<ul>
+<li>Phần 1: Nhật ký suy luận logic (Reasoning Steps) chỉ ra công thức tính toán và số liệu trung gian.</li>
+<li>Phần 2: Bảng phân bổ ngân sách cuối cùng bằng Markdown Table với các cột: Hạng mục, Số tiền, Tỷ lệ %, Ghi chú.</li>
+</ul>
+<h2 id="bài-làm-">Bài làm :</h2>
+<h3 id="phần-i-mẫu-prompt-lập-kế-hoạch-tài-chính-dành-cho-ai">PHẦN I: MẪU PROMPT LẬP KẾ HOẠCH TÀI CHÍNH (DÀNH CHO AI)</h3>
+<p><strong>[Vai trò]:</strong> Chuyên gia tài chính cẩn trọng.<br>
+<strong>[Dữ liệu đầu vào]:</strong> Tổng thu nhập tháng: <strong>10.000.000 VNĐ</strong>, Chi phí cố định: <strong>3.000.000 VNĐ</strong>, Trả nợ tối thiểu: <strong>2.000.000 VNĐ</strong>, Tiết kiệm mục tiêu: <strong>20%</strong>.<br>
+<strong>[Quy tắc Chain-of-Thought]:</strong> Hãy suy nghĩ từng bước một và tính toán chi tiết trước khi đưa ra quyết định:</p>
+<ul>
+<li><strong>Bước 1:</strong> Tính thu nhập khả dụng sau khi trừ chi phí cố định.</li>
+<li><strong>Bước 2:</strong> Trừ khoản tiền trả nợ tối thiểu.</li>
+<li><strong>Bước 3:</strong> Trích lập quỹ tiết kiệm (20% trên tổng thu nhập).</li>
+<li><strong>Bước 4:</strong> Phân bổ phần còn lại cho chi tiêu linh hoạt theo quy tắc 50/30/20 cải tiến.</li>
+</ul>
+<h3 id="phần-ii-kết-quả-thực-thi-minh-họa">PHẦN II: KẾT QUẢ THỰC THI MINH HỌA</h3>
+<h4 id="phần-1-nhật-ký-suy-luận-logic-reasoning-steps">Phần 1: Nhật ký suy luận logic (Reasoning Steps)</h4>
+<ul>
+<li><strong>Bước 1: Tính thu nhập khả dụng</strong><br>
+-   Tổng thu nhập:  <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10.000.000</mn><mtext>&nbsp;VNĐ</mtext></mrow><annotation encoding="application/x-tex">10.000.000\text{ VNĐ}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord">10.000.000</span><span class="mord text"><span class="mord">&nbsp;VN</span><span class="mord latin_fallback">Đ</span></span></span></span></span></span><br>
+-   Trừ chi phí cố định (<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3.000.000</mn><mtext>&nbsp;VNĐ</mtext></mrow><annotation encoding="application/x-tex">3.000.000\text{ VNĐ}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord">3.000.000</span><span class="mord text"><span class="mord">&nbsp;VN</span><span class="mord latin_fallback">Đ</span></span></span></span></span></span>) <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.36687em; vertical-align: 0em;"></span><span class="mrel">→</span></span></span></span></span> Còn lại:  <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7.000.000</mn><mtext>&nbsp;VNĐ</mtext></mrow><annotation encoding="application/x-tex">7.000.000\text{ VNĐ}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord">7.000.000</span><span class="mord text"><span class="mord">&nbsp;VN</span><span class="mord latin_fallback">Đ</span></span></span></span></span></span>.<br>
+-   <strong>Bước 2: Phân bổ trả nợ tối thiểu</strong>
+<ul>
+<li>Trả nợ:  <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2.000.000</mn><mtext>&nbsp;VNĐ</mtext></mrow><annotation encoding="application/x-tex">2.000.000\text{ VNĐ}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord">2.000.000</span><span class="mord text"><span class="mord">&nbsp;VN</span><span class="mord latin_fallback">Đ</span></span></span></span></span></span>  <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>→</mo></mrow><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.36687em; vertical-align: 0em;"></span><span class="mrel">→</span></span></span></span></span> Còn lại:  <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7.000.000</mn><mo>−</mo><mn>2.000.000</mn><mo>=</mo><mn>5.000.000</mn><mtext>&nbsp;VNĐ</mtext></mrow><annotation encoding="application/x-tex">7.000.000 - 2.000.000 = 5.000.000\text{ VNĐ}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.72777em; vertical-align: -0.08333em;"></span><span class="mord">7.000.000</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">2.000.000</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord">5.000.000</span><span class="mord text"><span class="mord">&nbsp;VN</span><span class="mord latin_fallback">Đ</span></span></span></span></span></span>.
+<ul>
+<li><strong>Bước 3: Trích lập quỹ tiết kiệm (20% tổng thu nhập)</strong></li>
+</ul>
+</li>
+<li>Tiết kiệm:  <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10.000.000</mn><mo>×</mo><mn>20</mn><mi mathvariant="normal">%</mi><mo>=</mo><mn>2.000.000</mn><mtext>&nbsp;VNĐ</mtext></mrow><annotation encoding="application/x-tex">10.000.000 \times 20\% = 2.000.000\text{ VNĐ}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.72777em; vertical-align: -0.08333em;"></span><span class="mord">10.000.000</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.80556em; vertical-align: -0.05556em;"></span><span class="mord">20%</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord">2.000.000</span><span class="mord text"><span class="mord">&nbsp;VN</span><span class="mord latin_fallback">Đ</span></span></span></span></span></span> (Cất đi trước).
+<ul>
+<li>Số tiền còn lại:  <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5.000.000</mn><mo>−</mo><mn>2.000.000</mn><mo>=</mo><mn>3.000.000</mn><mtext>&nbsp;VNĐ</mtext></mrow><annotation encoding="application/x-tex">5.000.000 - 2.000.000 = 3.000.000\text{ VNĐ}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.72777em; vertical-align: -0.08333em;"></span><span class="mord">5.000.000</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">2.000.000</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord">3.000.000</span><span class="mord text"><span class="mord">&nbsp;VN</span><span class="mord latin_fallback">Đ</span></span></span></span></span></span>.</li>
+<li><strong>Bước 4: Phân bổ chi tiêu linh hoạt</strong></li>
+</ul>
+</li>
+<li>Dùng <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3.000.000</mn><mtext>&nbsp;VNĐ</mtext></mrow><annotation encoding="application/x-tex">3.000.000\text{ VNĐ}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord">3.000.000</span><span class="mord text"><span class="mord">&nbsp;VN</span><span class="mord latin_fallback">Đ</span></span></span></span></span></span> còn lại cho ăn uống, đi lại và sinh hoạt cá nhân.
+<ul>
+<li>Tổng cộng kiểm tra:  <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3.000.000</mn><mrow><mtext>&nbsp;(c</mtext><mover accent="true"><mover accent="true"><mtext>o</mtext><mo>ˆ</mo></mover><mo>ˊ</mo></mover><mtext>&nbsp;định)</mtext></mrow><mo>+</mo><mn>2.000.000</mn><mtext>&nbsp;(nợ)</mtext><mo>+</mo><mn>2.000.000</mn><mrow><mtext>&nbsp;(ti</mtext><mover accent="true"><mover accent="true"><mtext>e</mtext><mo>ˆ</mo></mover><mo>ˊ</mo></mover><mtext>t&nbsp;kiệm)</mtext></mrow><mo>+</mo><mn>3.000.000</mn><mtext>&nbsp;(linh&nbsp;hoạt)</mtext><mo>=</mo><mn>10.000.000</mn><mtext>&nbsp;VNĐ</mtext></mrow><annotation encoding="application/x-tex">3.000.000 \text{ (cố định)} + 2.000.000 \text{ (nợ)} + 2.000.000 \text{ (tiết kiệm)} + 3.000.000 \text{ (linh hoạt)} = 10.000.000\text{ VNĐ}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1.20788em; vertical-align: -0.25em;"></span><span class="mord">3.000.000</span><span class="mord text"><span class="mord">&nbsp;(c</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.95788em;"><span class="" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.69444em;"><span class="" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="mord">o</span></span><span class="" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="accent-body" style="left: -0.25em;"><span class="mord">ˆ</span></span></span></span></span></span></span></span><span class="" style="top: -3.26344em;"><span class="pstrut" style="height: 3em;"></span><span class="accent-body" style="left: -0.25em;"><span class="mord">ˊ</span></span></span></span></span></span></span><span class="mord">&nbsp;</span><span class="mord latin_fallback">đ</span><span class="mord">ịnh)</span></span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord">2.000.000</span><span class="mord text"><span class="mord">&nbsp;(nợ)</span></span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 1.20788em; vertical-align: -0.25em;"></span><span class="mord">2.000.000</span><span class="mord text"><span class="mord">&nbsp;(ti</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.95788em;"><span class="" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.69444em;"><span class="" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="mord">e</span></span><span class="" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="accent-body" style="left: -0.25em;"><span class="mord">ˆ</span></span></span></span></span></span></span></span><span class="" style="top: -3.26344em;"><span class="pstrut" style="height: 3em;"></span><span class="accent-body" style="left: -0.25em;"><span class="mord">ˊ</span></span></span></span></span></span></span><span class="mord">t&nbsp;kiệm)</span></span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord">3.000.000</span><span class="mord text"><span class="mord">&nbsp;(linh&nbsp;hoạt)</span></span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord">10.000.000</span><span class="mord text"><span class="mord">&nbsp;VN</span><span class="mord latin_fallback">Đ</span></span></span></span></span></span> (Khớp 100%).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="phần-2-bảng-phân-bổ-ngân-sách-cuối-cùng">Phần 2: Bảng phân bổ ngân sách cuối cùng</h4>
+
+<table>
+<thead>
+<tr>
+<th>Hạng mục</th>
+<th>Số tiền</th>
+<th>tỷ lệ</th>
+<th>Ghi chú</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tổng thu nhập</td>
+<td>10.000.000 VNĐ</td>
+<td>100%</td>
+<td>nguồn thu trong tháng</td>
+</tr>
+<tr>
+<td>chi phí cố định</td>
+<td>3.000.000 VNĐ</td>
+<td>30%</td>
+<td>tiền nhà , điện , nước</td>
+</tr>
+<tr>
+<td>trả nợ bắt buộc</td>
+<td>2.000.000 VNĐ</td>
+<td>20%</td>
+<td>thanh toán nợ đúng hạn</td>
+</tr>
+<tr>
+<td>quỹ tiết kiệm</td>
+<td>2.000.000 VNĐ</td>
+<td>20%</td>
+<td>đạt mục tiêu tích lũy</td>
+</tr>
+<tr>
+<td>chi tiêu linh hoạt</td>
+<td>3.000.000 VNĐ</td>
+<td>30%</td>
+<td>ăn uống , sinh hoạt , đi lại</td>
+</tr>
+<tr>
+<td>tổng cộng</td>
+<td>10.000.000 VNĐ</td>
+<td>100%</td>
+<td>cân đối tài chính hoàn hảo</td>
+</tr>
+</tbody>
+</table></div>
+</body>
+
+</html>
